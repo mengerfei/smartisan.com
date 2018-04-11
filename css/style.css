@@ -1,0 +1,421 @@
+@charset "utf-8";
+body{
+	background-color: #EDEDED;
+}
+#wrap{
+	min-width:1220px;
+}
+#header{
+	position: relative;
+	z-index:4;
+	height:	100px;
+	background-color: #1a1a1a;
+}
+#header .h-main{
+	position: relative;
+}
+#header .h-main h1{
+	width: 50px;
+	height: 50px;
+	margin-top: 25px;
+}
+.h-main h1 a{
+	display: block;
+	overflow:hidden;
+	width: 100%;
+	height: 100%;
+	background:url("../images/logo.png") 0 5px/cover no-repeat;
+	text-indent:-999px;
+}
+/*头部导航区块*/
+.h-main .h-nav{
+	margin-left: 220px;
+}
+.h-main .h-nav li{
+	float: left;
+	line-height: 100px;
+}
+.h-main .h-nav li .active{
+	color: #fff;
+}
+.h-main .h-nav li a{
+	padding: 0 25px;
+	color: #c8c8c8;
+}
+/*头部的购物车*/
+.h-main .cart{
+	position: absolute;
+	right:0;
+	top:40px;
+	height: 20px;
+}
+.h-main .cart li{
+	float: left;
+}
+.h-main .cart .line-v:before{
+	height: 13px;
+	background-color: #242424;
+}
+.h-main .cart .user{
+	display: block;
+	width: 36px;
+	height: 20px;
+	margin-left: 35px;
+	background: url("../images/account-icon.png") -58px 0 no-repeat;
+}
+.h-main .cart .user:hover{
+	background-position: 2px 0;
+}
+.h-main .cart .cart-info{
+	display: block;
+	width: 60px;
+	height: 20px;
+}
+.h-main .cart .cart-info:before{
+	display: inline-block;
+	width: 30px;
+	height: 20px;
+	background: url("../images/account-icon.png") -61px -21px no-repeat;
+	vertical-align:middle;
+	content:"";
+}
+.h-main .cart .cart-info:hover:before{
+	background-position-x:-1px;
+}
+.h-main .cart .cart-info i{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-color: #9C9C9C;
+	color: #fff;
+	text-align: center;
+	vertical-align:middle;
+	line-height: 20px;
+	border-radius:50%;
+}
+/*购物车的列表信息*/
+.h-main .cart .cart-show{
+	position: relative;
+	padding-bottom: 16px;
+	margin-left: 30px;
+}
+.cart-show .cart-list:before{
+	position: absolute;
+	top:-7px;
+	right:32px;
+	width: 20px;
+	height: 7px;
+	background:#000 url("../images/account-icon.png") -50px -44px;
+	content:"";
+}
+.cart-show .cart-list{
+	visibility: hidden;
+	position: absolute;
+	top:36px;
+	right:0;
+	width: 360px;
+	height: 314px;
+	background: #fff url("../images/cart.png") 50% 40% no-repeat;
+	opacity:0;
+	text-align: center;
+	border-radius:10px;
+	box-shadow:0 0 0 1px rgba(0,0,0,.06), 
+				0 20px 40px rgba(0,0,0,.15);
+	transition:.1s;
+}
+.cart-show:hover .cart-list{
+	visibility:visible;
+	opacity:1;
+}
+.cart-show .cart-list h4{
+	margin-top: 180px;
+	margin-bottom: 7px;
+	font-size: 18px;
+	color: #333;
+}
+.cart-show .cart-list p{
+	font-size: 12px;
+	color: #bcbcbc;
+}
+
+/*附属导航*/
+#sub-nav{
+	position: relative;
+	z-index:3;
+	height: 90px;
+}
+#sub-nav ul li{
+	position: relative;
+	float: left;
+	margin-top: 31px;
+}
+#sub-nav .active{
+	font-weight: bold;
+}
+#sub-nav ul a{
+	display: block;
+	padding: 0 20px;
+	line-height: 28px;
+	color: #666;
+}
+#sub-nav li:before{
+	position: absolute;
+	top:0;
+	bottom:0;
+	width: 2px;
+	height: 2px;
+	margin: auto;
+	background-color: rgba(0,0,0,.2);
+	content:"";
+}
+#sub-nav .phone:hover:before{
+	background-color: rgba(0,0,0,.5);
+}
+#sub-nav .phone:hover ~ li:before{
+	background-color: rgba(0,0,0,.5);
+}
+#sub-nav .active:before{
+	display: none;
+}
+#sub-nav .active a{
+	padding-left: 10px;
+}
+/*主体内容*/
+#content{
+	position: relative;
+	z-index:2;
+}
+/*轮播*/
+.banner{
+	overflow:hidden;
+	width: 1220px;
+	height: 500px;
+	border-radius:15px;
+}
+.banner .banner-list div{
+	width: 1220px;
+	height: 500px;
+	background-position: 0 -27px;
+}
+.banner .item1{
+	background-image:url("../images/banner1.webp")
+}
+.banner .item2{
+	background-image:url("../images/banner2.webp")
+}
+.banner .item3{
+	background-image:url("../images/banner3.webp")
+}
+.banner .swiper-pagination-bullet-active{
+	background-color: #fff;
+}
+/*活动区域*/
+.c-activity li{
+	position: relative;
+	float: left;
+	width: 304.5px;
+	height: 200px;
+}
+.c-activity li > img{
+	width: 100%;
+	height: 100%;
+}
+.c-activity li > a{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	transition:all .15s ease;
+}
+.c-activity li > a:hover{
+	box-shadow: inset 0 0 38px rgba(0,0,0,.1);
+}
+/*主体商品区域的公共样式*/
+.main-products{
+	width: 1218px;
+}
+/*公共区域的头部样式*/
+#content .tit{
+	position: relative;
+	width: 100%;
+	height: 60px;
+	border-bottom:1px solid  #f00;
+	background-color: #fafafa;
+	line-height: 60px;
+}
+#content .tit h2{
+	margin-left: 30px;
+	font-size: 18px;
+}
+.main-products .main-products-list > .pro{
+	position: relative;
+	float: left;
+	width: 304.5px;
+	height: 429px;
+	background-color: #fff;
+	text-align: center;
+	transition:all .05s;
+}
+/*列表的左边的推荐的li*/
+.main-products .main-products-list > .recommend{
+	float: left;
+	width: 609px;
+	height: 429px;
+}
+.main-products .main-products-list > .recommend > img{
+	width: 100%;
+	height: 100%;
+}
+.main-products .main-products-list > li:hover{
+	box-shadow: inset 0 0 38px rgba(0,0,0,.1);
+}
+.main-products .main-products-list > .pro > img{
+	width: 216px;
+	height: 216px;
+	margin-bottom: 20px;
+	margin-top: 45px;
+}
+.main-products .main-products-list > .pro > h3{
+	overflow: hidden;
+	padding: 0 8px;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	font-size: 14px;
+	line-height: 1.2;
+	color: #333;
+	font-weight: 700;
+}
+.main-products .main-products-list > .pro > .detail{
+	padding-top: 15px;
+	font-size: 12px;
+	line-height: 1.2;
+	color: #999;
+}
+.main-products .main-products-list > li > a{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+}
+.main-products .main-products-list .select{
+	position: relative;
+	margin-top: 16px;
+}
+.main-products .main-products-list .select li{
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border: 2px solid #fff;
+	margin: 0 6px;
+	box-shadow:0 0 0 1px #e5e5e5;
+	border-radius:50%;
+	transition:all .05s;
+}
+.main-products .main-products-list .select .circle1{
+	background-color: #7a212f;
+}
+.main-products .main-products-list .select .circle2{
+	background-color: #ff0;
+}
+.main-products .main-products-list .select .circle3{
+	background-color: #f66;
+}
+.main-products .main-products-list .select .circle4{
+	background-color: #f60;
+}
+.main-products .main-products-list .select .circle5{
+	background-color: #0ff;
+}
+.main-products .main-products-list .select li:hover{
+	box-shadow:0 0 0 2px  #b2b2b2;
+}
+/*价格*/
+.main-products .main-products-list > .pro > .price{
+	margin-top: 20px;
+	font-family:  Arial;
+	font-size: 18px;
+	line-height: 1.2;
+	font-weight: 700;
+	color: #d44d44;
+}
+.main-products .main-products-list > .pro > .price i{
+	font-size: 14px;
+}
+.main-products .main-products-list .see-detail{
+	visibility:hidden;
+	position: absolute;
+	bottom:30px;
+	left:0;
+	right:0;
+	width: 216px;
+	margin: auto;
+	opacity:0;
+	background-color: #fff;
+	font-size: 0;
+	transition:all .1s;
+}
+.main-products .main-products-list > .pro:hover .see-detail{
+	visibility: visible;
+	opacity:1;
+}
+.main-products .main-products-list .see-detail .btn{
+	display: inline-block;
+	width: 98px;
+	height: 28px;
+	margin: 0 4px;
+	border:1px solid #e1e1e1;
+	line-height: 28px;
+	font-size: 12px;
+	border-radius:4px;
+}
+.main-products .main-products-list .see-detail .btn1{
+	background-color: #f9f9f9;
+	color: #646464;
+}
+.main-products .main-products-list .see-detail .btn1:hover{
+	background-color: #eee;
+}
+.main-products .main-products-list .see-detail .btn2{
+	background-color: #678ee7;
+	cursor:pointer;
+	color: #fff;
+}
+.main-products .main-products-list .see-detail .btn2:hover{
+	background-color: #6c8cd4;
+}
+.main-products .main-products-list > .pro .down{
+	border:1px solid #d5b480;
+	background-color: #fffbdf;
+	color: #a06e37;
+}
+.main-products .main-products-list > .pro .discount{
+	position: absolute;
+	top:20px;
+	right:20px;
+	padding: 1px 15px;
+	font-size: 12px;
+	border-radius:13px;
+}
+/*热门商品区域*/
+.c-hot-goods .tit .btn{
+	position: absolute;
+	right:15px;
+	top:14px;
+	width: 90px;
+	height: 32px;
+}
+.c-hot-goods .tit .btn i{
+	display: block;
+	width: 32px;
+	height: 32px;
+	background:url("../images/btn.png") no-repeat;
+}
+.c-hot-goods .tit .btn .prev{
+	background-position: -48px 0;
+}
+.c-hot-goods .tit .btn .next{
+	background-position: -139px 1px;
+}
+/*锤子应用*/
